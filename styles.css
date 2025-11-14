@@ -1,0 +1,539 @@
+/* ====== Base ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif; /* futuristic font */
+  background-color: #0b002b; /* deep space purple */
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ====== Header / Hero ====== */
+header {
+  height: 100vh;
+  background: radial-gradient(circle at center, rgba(20, 0, 40, 0.77), rgba(0, 0, 16, 0.85)),
+              url('Images/stars-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #e0e0ff;
+  box-shadow: 0 0 60px rgba(155, 70, 255, 0.3) inset;
+  animation: spaceShift 20s ease-in-out infinite alternate;
+}
+
+/* Add subtle glowing stars effect using pseudo elements */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-radial-gradient(circle, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 1px, transparent 2px);
+  background-size: 3px 3px;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes spaceShift {
+  0% { background-position: center top; }
+  100% { background-position: center bottom; }
+}
+
+
+@keyframes twinkle {
+  from {opacity: 0.8;}
+  to {opacity: 1;}
+}
+
+
+/* ====== Navbar ====== */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #7b2cbf;
+  text-shadow: 0 0 10px #7b2cbf, 0 0 30px #7b2cbf;
+  animation: neonFlicker 1.2s linear 1, neonPulse 2.5s ease-in-out infinite alternate;
+}
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0ff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c77dff;
+  text-shadow:  0 0 10px #c77dff, 0 0 25px #c77dff;
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #e0e0ff;
+  z-index: 30;
+}
+
+
+
+/* ====== Hero Content ====== */
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e0e0ff;
+  text-shadow: 0 0 8px #9d4edd, 0 0 30px #7b2cbf;;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #d1c3ff;
+}
+
+.btn {
+  background-color: #7b2cbf;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #7b2cbf, 0 0 30px #9d4edd;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #9d4edd;
+  box-shadow: 0 0 15px #c77dff, 0 0 40px #c77dff;
+  transform: scale(1.05);
+  animation: neonPulse 2.5s ease-in-out infinite alternate;
+}
+
+/* ====== About Me ====== */
+
+/* ====== About Section ====== */
+.about-section {
+  background: linear-gradient(to bottom, rgba(11, 0, 43, 0.9), rgba(20, 0, 40, 1));
+  color: #e0e0ff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  border-top: 2px solid rgba(155, 70, 255, 0.3);
+  box-shadow: 0 -10px 30px rgba(155, 70, 255, 0.2);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ====== Section Title ====== */
+.section-title {
+  font-size: 2rem;
+  color: #c77dff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #9d4edd, 0 0 20px #7b2cbf;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Add glowing line under title */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  margin: 15px auto 0;
+  background: linear-gradient(90deg, #7b2cbf, #c77dff, #7b2cbf);
+  border-radius: 3px;
+  box-shadow: 0 0 10px #c77dff, 0 0 25px #9d4edd;
+}
+
+/* ====== About Text ====== */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #d1c3ff;
+  text-shadow: 0 0 5px rgba(200, 150, 255, 0.3);
+}
+
+/* ====== Resume Button ====== */
+.resume-btn {
+  display: inline-block;
+  background-color: #7b2cbf;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 10px #7b2cbf, 0 0 30px #9d4edd;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #9d4edd;
+  box-shadow: 0 0 15px #c77dff, 0 0 40px #c77dff;
+  transform: scale(1.05);
+}
+
+/* ====== Skills Section ====== */
+.skills-section {
+  background: linear-gradient(to bottom, rgba(20, 0, 40, 1), rgba(15, 0, 30, 1));
+  color: #e0e0ff;
+  padding: 100px 20px;
+  text-align: center;
+  border-top: 2px solid rgba(155, 70, 255, 0.3);
+  box-shadow: 0 -10px 30px rgba(155, 70, 255, 0.2);
+}
+
+/* ====== Skills Grid ====== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  justify-items: center;
+}
+
+/* ====== Skill Card ====== */
+.skill-card {
+  background: rgba(50, 0, 100, 0.2);
+  color: #c77dff;
+  font-weight: bold;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 160px;
+  border-radius: 15px;
+  border: 1px solid rgba(155, 70, 255, 0.4);
+  box-shadow: 0 0 15px rgba(155, 70, 255, 0.15);
+  text-shadow: 0 0 8px #9d4edd, 0 0 16px #7b2cbf;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  background: rgba(100, 0, 200, 0.3);
+  color: #fff;
+  border: 1px solid #c77dff;
+  box-shadow: 0 0 20px #c77dff, 0 0 40px #9d4edd;
+  transform: scale(1.08);
+}
+
+/* Optional Glow Animation */
+
+.skill-card:nth-child(odd) {
+  animation: skillGlow 3s ease-in-out infinite alternate;
+}
+
+/* ====== Projects Section ====== */
+.projects-section {
+  background: linear-gradient(to bottom, rgba(15, 0, 30, 1), rgba(10, 0, 25, 1));
+  color: #e0e0ff;
+  padding: 100px 20px;
+  text-align: center;
+  border-top: 2px solid rgba(155, 70, 255, 0.3);
+  box-shadow: 0 -10px 30px rgba(155, 70, 255, 0.2);
+}
+
+/* ====== Projects Grid ====== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* ====== Project Card ====== */
+.project-card {
+  background: rgba(50, 0, 100, 0.25);
+  border: 1px solid rgba(155, 70, 255, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(155, 70, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px #c77dff, 0 0 50px #7b2cbf;
+}
+
+/* ====== Project Image ====== */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover img {
+  opacity: 1;
+}
+
+/* ====== Project Info ====== */
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #c77dff;
+  text-shadow: 0 0 10px #7b2cbf;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #d1c3ff;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+/* ====== Project Links ====== */
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn.small {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  background-color: #7b2cbf;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 10px #7b2cbf, 0 0 20px #9d4edd;
+  transition: all 0.3s ease;
+}
+
+.btn.small:hover {
+  background-color: #9d4edd;
+  box-shadow: 0 0 20px #c77dff, 0 0 40px #c77dff;
+  transform: scale(1.05);
+}
+
+/* ====== Contact Section ====== */
+.contact-section {
+  background: radial-gradient(circle at center, rgba(15, 0, 30, 1), rgba(5, 0, 20, 1));
+  color: #e0e0ff;
+  padding: 100px 20px;
+  text-align: center;
+  border-top: 2px solid rgba(155, 70, 255, 0.3);
+  box-shadow: 0 -10px 30px rgba(155, 70, 255, 0.2);
+}
+
+/* ====== Contact Text ====== */
+.contact-text {
+  font-size: 1.1rem;
+  color: #d1c3ff;
+  margin: 1rem auto 2.5rem;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* ====== Contact Links (Flexbox) ====== */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(50, 0, 100, 0.25);
+  border: 1px solid rgba(155, 70, 255, 0.3);
+  color: #c77dff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(155, 70, 255, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.contact-item:hover {
+  color: #fff;
+  background: rgba(100, 0, 200, 0.4);
+  box-shadow: 0 0 20px #c77dff, 0 0 40px #9d4edd;
+  transform: scale(1.08);
+}
+
+/* ====== Icons ====== */
+.contact-item i {
+  font-size: 1.2rem;
+}
+
+/* ====== Footer ====== */
+.footer {
+  background-color: #0a001a;
+  color: #bba8ff;
+  padding: 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(155, 70, 255, 0.3);
+  box-shadow: 0 -10px 30px rgba(155, 70, 255, 0.1);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+  flex-direction: column;
+  position: fixed;       /* already fixed */
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100vh;
+  background: rgba(20, 0, 40, 0.6); /* glass effect */
+  backdrop-filter: blur(10px);
+  border-left: 2px solid #7b2cbf;
+  padding: 80px 20px;
+  gap: 2rem;
+  transition: right 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: -5px 0 30px rgba(123, 44, 191, 0.5), -5px 0 50px rgba(199, 125, 255, 0.3);
+  border-radius: 15px 0 0 15px;
+  z-index: 25;
+  }
+
+  .nav-links.active {
+    right: 0; /* Slide in */
+    animation: menuGlow 0.5s ease forwards;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(123,44,191,0.2);
+    box-shadow: 0 0 10px #7b2cbf, 0 0 20px #c77dff;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background: rgba(155,70,255,0.4);
+    box-shadow: 0 0 20px #c77dff, 0 0 40px #9d4edd;
+    transform: scale(1.05);
+  }
+}
+
+
+/* ====== Animations ====== */
+
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #7b2cbf,
+      0 0 10px #7b2cbf,
+      0 0 20px #7b2cbf,
+      0 0 40px #9d4edd,
+      0 0 60px #c77dff;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #7b2cbf,
+      0 0 5px #7b2cbf,
+      0 0 10px #9d4edd,
+      0 0 20px #c77dff,
+      0 0 30px #c77dff;
+  }
+
+  0% { text-shadow: 0 0 5px #7b2cbf, 0 0 15px #7b2cbf; }
+  50% { text-shadow: 0 0 20px #7b2cbf, 0 0 40px #7b2cbf; }
+  100% { text-shadow: 0 0 5px #7b2cbf, 0 0 15px #7b2cbf; }
+}
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.3;
+  }
+
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { text-shadow: 0 0 10px #7b2cbf, 0 0 30px #7b2cbf; }
+  20%, 22%, 24%, 55% { text-shadow: none; }
+
+
+}
+@keyframes spaceShift {
+  0% { background-position: center top; }
+  100% { background-position: center bottom; }
+}
+
+@keyframes twinkle {
+  from {opacity: 0.8;}
+  to {opacity: 1;}
+}
+
+/* Skill Card Glow Animation */
+/* Optional Glow Animation */
+@keyframes skillGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #9d4edd, 0 0 20px #7b2cbf;
+  }
+  50% {
+    box-shadow: 0 0 20px #c77dff, 0 0 40px #9d4edd;
+  }
+}
+
+@keyframes menuGlow {
+  0% {
+    box-shadow: -5px 0 10px rgba(123, 44, 191, 0.3), -5px 0 20px rgba(199, 125, 255, 0.2);
+  }
+  50% {
+    box-shadow: -5px 0 25px rgba(123, 44, 191, 0.6), -5px 0 50px rgba(199, 125, 255, 0.4);
+  }
+  100% {
+    box-shadow: -5px 0 30px rgba(123, 44, 191, 0.5), -5px 0 50px rgba(199, 125, 255, 0.3);
+  }
+}
