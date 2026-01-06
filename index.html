@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lee McLeod | Front-End Web Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -17,18 +22,22 @@
 
         <ul class="nav-links" id="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#process">Workflow</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="hero-content">
-        <h2>Front-End Web Developer</h2>
+        <h2>Front-End Web Developer For Small Businesses</h2>
         <p>
-          Building responsive, user-focused websites with Angular, HTML, CSS,
-          and JavaScript.
+          I design and build responsive, user-friendly websites that help
+          businesses connect with customers.
         </p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-actions">
+          <span class="hero-note">Available for freelance projects</span>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
       </div>
     </header>
 
@@ -36,18 +45,25 @@
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <p class="about-text">
-          Hi, Im <strong>Lee McLeod</strong> — a Front-End Web Developer
-          passionate about creating visually engaging, user-friendly websites. I
-          enjoy combining creativity with clean, maintainable code to bring
-          ideas to life in the browser.
+          Hi, I’m <strong>Lee McLeod</strong> — a Front-End Web Developer who
+          builds clean, mobile-friendly websites for small businesses. I focus
+          on clear layouts, smooth user experience, and making it easy for
+          customers to take action.
         </p>
 
         <p class="about-text">
-          I specialize in modern front-end technologies like
+          Whether you need a new site or a redesign, I can help with modern UI,
+          responsive design, and fast performance. I primarily work with
           <strong>Angular</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
-          and <strong>JavaScript</strong>. Im always learning new ways to design
-          better digital experiences and keep up with evolving web standards.
+          and <strong>JavaScript</strong>.
         </p>
+
+        <p class="about-intro">Here’s what I can help with:</p>
+        <div class="about-highlights">
+          <div class="highlight">Responsive websites (mobile-first)</div>
+          <div class="highlight">Landing pages & small business sites</div>
+          <div class="highlight">Redesigns, updates, and UI polish</div>
+        </div>
 
         <a
           href="assets/Front-end Web Dev Resume.pdf"
@@ -56,6 +72,40 @@
         >
           Download Resume
         </a>
+      </div>
+    </section>
+
+
+<!-- ====== Process Section ====== -->
+    <section id="process" class="process-section">
+      <div class="container">
+        <h2 class="section-title">How I Work</h2>
+
+        <div class="process-steps">
+          <div class="step">
+            <h3>1. Understand Your Goals</h3>
+            <p>
+              We start with a short conversation about your business, your
+              audience, and what you want your website to do.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>2. Design & Build</h3>
+            <p>
+              I design and build a clean, responsive website that works smoothly
+              on desktop and mobile.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>3. Launch & Support</h3>
+            <p>
+              Once everything looks good, your site goes live. I’m available for
+              updates or improvements as needed.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -89,14 +139,26 @@
             <img src="Images/movie-website.png" alt="Movie Website" />
             <div class="project-info">
               <h3>Movie Website</h3>
-              <p>
-                Built with Angular, HTML, CSS, and TypeScript — a responsive
-                site for browsing and viewing movie details using reusable
-                components.
+              <p class="project-summary">
+                <span
+                  ><strong>Purpose:</strong> Browse movies and shows with
+                  detailed views</span
+                >
+                <span
+                  ><strong>Outcome:</strong> Responsive layout using reusable
+                  components</span
+                >
               </p>
+
               <div class="project-links">
-                <a href="https://watchmovieslee.netlify.app/" class="btn small">Live Demo</a>
-                <a href="https://github.com/alexlee198/watch-movies" class="btn small">View Code</a>
+                <a href="https://watchmovieslee.netlify.app/" class="btn small"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/alexlee198/watch-movies"
+                  class="btn small"
+                  >View Code</a
+                >
               </div>
             </div>
           </div>
@@ -106,13 +168,26 @@
             <img src="Images/pastry-shop.png" alt="Pastry Shop Website" />
             <div class="project-info">
               <h3>Pastry Shop Website</h3>
-              <p>
-                A modern e-commerce design featuring responsive grid layouts,
-                hover animations, and simulated shopping interactions.
+              <p class="project-summary">
+                <span
+                  ><strong>Purpose:</strong> Showcase bakery products in a
+                  clean, modern way</span
+                >
+                <span
+                  ><strong>Outcome:</strong> Mobile-friendly design that makes
+                  browsing simple</span
+                >
               </p>
+
               <div class="project-links">
-                <a href="https://leepastryshop.netlify.app/" class="btn small">Live Demo</a>
-                <a href="https://github.com/alexlee198/Pastry_Shop" class="btn small">View Code</a>
+                <a href="https://leepastryshop.netlify.app/" class="btn small"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/alexlee198/Pastry_Shop"
+                  class="btn small"
+                  >View Code</a
+                >
               </div>
             </div>
           </div>
@@ -122,13 +197,23 @@
             <img src="Images/church-site.png" alt="Church Landing Page" />
             <div class="project-info">
               <h3>Church Landing Page</h3>
-              <p>
-                A one-page layout with embedded media, clean typography, and
-                responsive design for community events and services.
+              <p class="project-summary">
+                <span
+                  ><strong>Purpose:</strong>Share service info and community
+                  updates</span
+                >
+                <span
+                  ><strong>Outcome:</strong> Simple, welcoming site for all
+                  ages</span
+                >
               </p>
               <div class="project-links">
-                <a href="https://alexlee198.github.io/GNLC/" class="btn small">Live Demo</a>
-                <a href="https://github.com/alexlee198/GNLC" class="btn small">View Code</a>
+                <a href="https://alexlee198.github.io/GNLC/" class="btn small"
+                  >Live Demo</a
+                >
+                <a href="https://github.com/alexlee198/GNLC" class="btn small"
+                  >View Code</a
+                >
               </div>
             </div>
           </div>
@@ -138,13 +223,27 @@
             <img src="Images/boxing-gym.png" alt="Boxing Gym Landing Page" />
             <div class="project-info">
               <h3>Boxing Gym Landing Page</h3>
-              <p>
-                A high-energy landing page using CSS transitions and a bold
-                layout to highlight services and trainers.
+              <p class="project-summary">
+                <span
+                  ><strong>Purpose:</strong> Promote gym services and attract
+                  new members</span
+                >
+                <span
+                  ><strong>Outcome:</strong> Bold layout with clear calls to
+                  action</span
+                >
               </p>
               <div class="project-links">
-                <a href="https://alexlee198.github.io/Boxing-LandingPage/" class="btn small">Live Demo</a>
-                <a href="https://github.com/alexlee198/Boxing-LandingPage" class="btn small">View Code</a>
+                <a
+                  href="https://alexlee198.github.io/Boxing-LandingPage/"
+                  class="btn small"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/alexlee198/Boxing-LandingPage"
+                  class="btn small"
+                  >View Code</a
+                >
               </div>
             </div>
           </div>
@@ -157,18 +256,27 @@
         <h2 class="section-title">Contact</h2>
 
         <p class="contact-text">
-          Let’s connect! Feel free to reach out if you’d like to collaborate or
-          just talk about web development.
+          Looking to build a new website or improve your current one?
+  I’m open to freelance projects and happy to talk through your ideas.
+
         </p>
 
         <div class="contact-links">
-          <a href="mailto:lmcleod17@stac.edu" class="contact-item">
-            <i class="fas fa-envelope"></i> lmcleod17@stac.edu
+          <a href="mailto:alexlee119988@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i> alexlee119988@gmail.com
           </a>
-          <a href="https://github.com/alexlee198" target="_blank" class="contact-item">
+          <a
+            href="https://github.com/alexlee198"
+            target="_blank"
+            class="contact-item"
+          >
             <i class="fab fa-github"></i> GitHub
           </a>
-          <a href="https://www.linkedin.com/in/lee-mcleod-687972148/" target="_blank" class="contact-item">
+          <a
+            href="https://www.linkedin.com/in/lee-mcleod-687972148/"
+            target="_blank"
+            class="contact-item"
+          >
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
@@ -179,7 +287,6 @@
     <footer class="footer">
       <p>© 2025 Lee McLeod | Designed & Coded with 💜 in the Retroverse</p>
     </footer>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
- 
 </html>
