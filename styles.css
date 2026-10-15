@@ -113,17 +113,23 @@ header::before {
   z-index: 1;
 }
 
-.hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #e0e0ff;
-  text-shadow: 0 0 8px #9d4edd, 0 0 30px #7b2cbf;;
+
+
+
+.hero-content .big-name {
+  font-size: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px;
+  text-shadow:none;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #d1c3ff;
+.hero-content .hero-role {
+  font-size: 32px;
+  font-weight: 500;
+  color: #e0e0ff;
+  margin: 0;
+  text-shadow: none;
 }
 
 .btn {
@@ -533,6 +539,14 @@ header::before {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+  }
+
+  .hero-content .big-name {
+    font-size: 42px;
+  }
+
+  .hero-content .hero-role {
+    font-size: 24px;
   }
 
   .nav-links {
